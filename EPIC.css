@@ -1,4 +1,50 @@
 @import url(https://mentor404.github.io/anilist-css/files/navbar.css);
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%233498db"/></svg>') 8 8, auto;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+/* Optional: Customize scrollbar style */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 6px;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #3498db; /* Cursor color */
+    border-radius: 50%;
+    pointer-events: none;
+    animation: cursorAnimation 0.5s linear infinite;
+}
+
+@keyframes cursorAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 }
 
 .header-wrap .nav-wrap .link:nth-child(6):before {
